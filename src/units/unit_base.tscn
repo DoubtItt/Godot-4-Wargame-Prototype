@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckwtt30suirxo"]
+
+[ext_resource type="Script" path="res://src/units/unit_base_script.gd" id="1_1u2tt"]
+[ext_resource type="Texture2D" uid="uid://hcv2d1k1aknp" path="res://gfx/ui/unit_ui/Highlighted-Boxes.png" id="2_4r35l"]
+[ext_resource type="Texture2D" uid="uid://dil08sh7ray3d" path="res://gfx/units/tilemap.png" id="2_omc5v"]
+
+[node name="UnitBase" type="Node2D"]
+script = ExtResource("1_1u2tt")
+max_action_points = 50
+move_speed = 60
+
+[node name="SelectionSprite" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 1, 0, 1)
+position = Vector2(0, 4)
+scale = Vector2(1, 0.5)
+texture = ExtResource("2_4r35l")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_omc5v")
+region_enabled = true
+region_rect = Rect2(272, 85, 16, 16)
+
+[node name="WeaponManager" type="Node2D" parent="."]
+
+[node name="LifeManager" type="Node2D" parent="."]
+
+[node name="YapText" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -32.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = 8.0
+scale = Vector2(0.5, 0.5)
+bbcode_enabled = true
+text = "[center] Hmm"
+fit_content = true
+scroll_active = false
